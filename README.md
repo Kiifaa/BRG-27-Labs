@@ -282,3 +282,115 @@ Explanation:
 - SCP securely copies files over a network using SSH  
 
 ![img](screenshots/Screenshot%202026-04-05%20212922.png)
+
+# Lab 1b-2 – Linux File Permissions and Group Access Control
+
+## Part 1: User Creation
+Created three users using:
+sudo adduser alice  
+sudo adduser bob  
+sudo adduser mallory  
+
+Verified users using:
+less /etc/passwd  
+
+![img]
+
+
+## Part 2: Group Configuration
+Created a group using `sudo groupadd sharedgroup`.  
+Added users to the group using:
+sudo usermod -aG sharedgroup alice  
+sudo usermod -aG sharedgroup bob  
+
+Verified using:
+less /etc/group  
+
+![img]
+
+
+## Part 3: Directory and File Setup
+Created a shared directory using:
+sudo mkdir /home/shared  
+
+Set group ownership:
+sudo chgrp -R sharedgroup /home/shared  
+
+Created files using:
+sudo touch /home/shared/file{1..10}  
+
+![img]
+
+
+## Part 4: Permission Assignment
+Set directory permissions using:
+sudo chmod -R 770 /home/shared  
+
+Modified file permissions using:
+sudo chmod 750 /home/shared/*  
+
+Verified permissions using:
+ls -l /home/shared  
+
+Explanation:
+- 770 → full access for owner and group  
+- 750 → restricted access for others  
+
+![img]
+
+
+## Part 5: Access Verification
+Switched users and tested access:
+
+su - alice  
+whoami  
+ls /home/shared  
+
+su - bob  
+whoami  
+ls /home/shared  
+
+su - mallory  
+whoami  
+ls /home/shared  
+
+Explanation:
+- Alice has full access  
+- Bob has limited access  
+- Mallory has no access (permission denied)  
+
+![img]
+
+
+## Part 6: Recursive Commands
+Applied recursive permission changes using:
+chmod -R  
+chown -R  
+chgrp -R  
+
+Explanation:
+- `-R` applies changes to all files and subdirectories  
+
+![img]
+
+
+## Part 7: Sudo Access for Mallory
+Added Mallory to sudo group using:
+sudo usermod -aG sudo mallory  
+
+Verified using:
+groups mallory  
+
+Tested using:
+sudo ls /root  
+
+Explanation:
+- Sudo allows elevated privileges beyond normal user permissions  
+
+![img]
+
+## Part 8: Cleanup
+Removed directory and contents using:
+sudo rm -r /home/shared  
+
+![img]
