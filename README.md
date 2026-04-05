@@ -102,7 +102,7 @@ Used `sudo whoami` to verify root access and successfully created a new user wit
 Explanation:
 - `sudo` allows temporary elevation to root (administrator) privileges to perform restricted actions  
 
-![img]
+![img](screenshots/Screenshot%202026-04-05%20170119.png)
 
 
 ## Part 4: Network Configuration and DNS
@@ -110,8 +110,9 @@ Explanation:
 ### Network Configuration
 Used `ip a` to display the system’s IP address and network interfaces.  
 Tested network connectivity using `ping 8.8.8.8`, confirming successful communication with an external server.
+Private IP is used within local networks, while public IP is used to identify a device on the internet.
 
-![img]
+![img](screenshots/Screenshot%202026-04-05%20170325.png)
 
 ### Hosts File
 Viewed the hosts file using `less /etc/hosts` and edited it using `sudo nano /etc/hosts`.  
@@ -120,44 +121,57 @@ Added a custom hostname mapping and verified it using `ping GoogleEpicDNS`.
 Explanation:
 - The hosts file is used to map domain names to IP addresses locally on the system  
 
-![img]
+![img](screenshots/Screenshot%202026-04-05%20171037.png)
 
 ### DNS Lookup
 Performed a DNS lookup using `nslookup google.com` to retrieve the IP address of the domain.  
 Installed the `whois` tool using `sudo apt install whois` and used `whois google.com` to retrieve domain registration details.
+Compare public/private IP via https://whatismyipaddress.com/.
 
 Explanation:
 - DNS translates human-readable domain names into IP addresses required for network communication  
 
-![img]
+![img](screenshots/Screenshot%202026-04-05%20171721.png)
+![img](screenshots/Screenshot%202026-04-05%20171732.png)
+![img](screenshots/Screenshot%202026-04-05%20172114.png)
 
 
 ## Part 5: System and Hardware Info
 Used `lsusb`, `lspci`, and `less /proc/cpuinfo` to inspect hardware components and system information.  
 Compared the command-line outputs with the graphical system information available under “About This Computer”.
+Used output redirection to save command output into a file using `lsusb > output_of_lsusb`, and viewed it using `less` and `cat`, then removed it using `rm`.
 
-![img]
+![img](screenshots/Screenshot%202026-04-05%20172616.png)
 
 
 ## Part 6: Software Installation Methods
-Installed software using multiple methods to understand different approaches:
+
+Installed software using multiple methods:
+
 - Ubuntu Software Centre (GUI-based installation)  
-- Downloaded and installed a `.deb` package (e.g., Chrome/Opera)  
+- Installed a `.deb` package (e.g., Chrome/Opera)  
 - Used browser-based SaaS applications  
 
-Updated system packages using:
+Updated system packages:
 sudo apt update  
 sudo apt upgrade  
 
-Installed software using:
+Installed software:
 sudo apt install vlc  
 
-Searched for packages using:
+Searched for packages:
 sudo apt search vlc  
 
-Viewed repository sources using:
+Viewed repository sources:
 less /etc/apt/sources.list  
 
-This demonstrates different methods of software installation in Linux systems.
+Explanation:
+- Software Centre provides a graphical way to install apps  
+- .deb files allow manual installation of software  
+- SaaS runs in a browser without installation  
+- apt commands install and manage software from repositories  
+- sources.list contains trusted repositories  
 
-![img]
+![img](screenshots/Screenshot%202026-04-05%20174218.png)
+![img](screenshots/Screenshot%202026-04-05%20174304.png)
+
