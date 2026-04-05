@@ -475,8 +475,9 @@ Explanation:
 
 
 ## Part 10: Answers
-- verdigris: (run grep to confirm, likely 0 or small number)
+- verdigris: 1
 - Largest file: moby.txt
 - Smallest file: alice.txt
-- Oldest file: (from your find command)
-- Most frequent word: the 
+- Oldest file: twocities.txt
+- Most frequent word: the
+![img](screenshots/Screenshot%202026-04-06%20013208.png)
