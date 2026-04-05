@@ -391,3 +391,90 @@ Removed directory and contents using:
 sudo rm -r /home/shared  
 
 ![img](screenshots/Screenshot%202026-04-06%20001116.png)
+
+# Lab 1b-3 – File Search, Analysis & Archiving
+
+## Part 1: Archive Extraction
+Extracted archive using:
+bunzip2 Gutenberg.tar.bz2  
+tar -xvf Gutenberg.tar  
+
+![img](screenshots/Screenshot%202026-04-06%20002809.png)
+
+
+## Part 2: File Exploration
+Listed files using:
+ls -l  
+
+Explored directory structure and contents.
+
+![img](screenshots/Screenshot%202026-04-06%20003210.png)
+
+
+## Part 3: File Name Search
+Searched for files using:
+find . -name "*.txt"  
+
+![img](screenshots/Screenshot%202026-04-06%20003322.png)
+
+
+## Part 4: Text Search
+Searched for keywords using:
+grep -r "verdigris" .  
+
+![img](screenshots/Screenshot%202026-04-06%20003735.png)
+
+
+## Part 5: Contextual Search
+Used:
+grep -r -C 3 "Next day there was a surprise for Jack" .  
+
+Explanation:
+- `-C 3` shows surrounding lines for context  
+
+![img]
+
+
+## Part 6: Date-Based Search
+Used:
+find . -type f -printf '%T+ %p\n' | sort  
+
+Explanation:
+- Helps identify oldest or newest files  
+
+![img]
+
+
+## Part 7: Size-Based Search
+Used:
+find . -type f -size 255258c  
+
+![img]
+
+
+## Part 8: Largest Files
+Used:
+du -a . | sort -nr | head  
+
+Explanation:
+- Identifies largest files in directory  
+
+![img]
+
+
+## Part 9: Frequency Analysis
+Used:
+sed -e 's/\s/\n/g' < file.txt | sort | uniq -c | sort -nr  
+
+Explanation:
+- Breaks text into words and counts frequency  
+
+![img]
+
+
+## Part 10: Answers
+- verdigris: 9  
+- 1107.txt author: Shakespeare  
+- 255258 bytes author: Lobo  
+- 3rd oldest file: 1498.txt  
+- word: Halliday  
