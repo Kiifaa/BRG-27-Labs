@@ -1,46 +1,177 @@
-# Lab 1a-1 – Linux Environment Setup
+# BRG-27 Lab Activities
 
-## Virtualisation Setup
-Installed VirtualBox as the virtualisation tool to run a Linux environment on my system.
+# Lab 1a-1 – Virtualisation and Linux Setup
 
-<img width="1900" height="880" alt="image" src="https://github.com/user-attachments/assets/6083b147-2086-4f76-801b-911c6fcbd05f" />
+## 1. VirtualBox Installed
+Installed Oracle VirtualBox on my system to create and run a virtual machine.
 
-## Ubuntu ISO Download
+![img](screenshots/Screenshot%202026-04-05%20140810.png)
+
+## 2. Ubuntu ISO Downloaded
 Downloaded the Ubuntu ISO file from the official Ubuntu website to use for installation.
 
-<img width="1614" height="508" alt="image" src="https://github.com/user-attachments/assets/b6c1b9ee-7f82-4c8c-8e63-dcc27fa2429e" />
+![img](screenshots/Screenshot%202026-04-05%20141156.png)
 
-## Virtual Machine Creation
-Created a new virtual machine in VirtualBox and configured settings such as name, memory allocation (e.g., 2048MB+), and attached the Ubuntu ISO file.
+# Lab 1a-2 – Ubuntu Desktop and Command Line Familiarisation
 
-<img width="1919" height="987" alt="image" src="https://github.com/user-attachments/assets/d705805f-2491-4ba8-94af-01a00b18261a" />
+## Part 1: Ubuntu Desktop GUI Familiarisation
+- Opened Firefox and confirmed internet access  
+- Opened LibreOffice and typed a document  
+- Navigated directories using File Manager  
+- Installed a program via Ubuntu Software Centre  
 
-## Virtual Machine Configuration
-Configured the virtual machine settings including storage and network (NAT or Bridged mode) to ensure proper functionality.
+![img](screenshots/Screenshot%202026-04-05%20144736.png)
 
-<img width="972" height="644" alt="image" src="https://github.com/user-attachments/assets/c3d4c312-f28b-42c4-b354-81447955688e" />
+## Part 2: CLI Basics and File Operations
 
-## Ubuntu Installation
-Booted the virtual machine using the ISO file and completed the Ubuntu installation using the guided setup.
+### Process Monitoring
+ps -e  
+top  
 
-<img width="1284" height="807" alt="image" src="https://github.com/user-attachments/assets/75d9de03-e436-4d94-b48a-f8eaa250959d" />
+Pressed `1` in top to display CPU usage per core.
 
-## Ubuntu Running
-Successfully launched Ubuntu after installation and confirmed that the operating system is running properly.
+![img](screenshots/Screenshot%202026-04-05%20145000.png)
+![img](screenshots/Screenshot%202026-04-05%20145146.png)
 
-<img width="1290" height="808" alt="image" src="https://github.com/user-attachments/assets/44b6983a-dfc2-46cf-8699-cf9f359dc67c" />
+### File Listing
+ls  
+ls -la  
+ls -alt  
+ls -lah  
 
-## Terminal Verification
-Verified the system using basic Linux commands such as `pwd`, `ls`, and `whoami` to confirm functionality.
+Difference:
+- ls shows basic files  
+- ls -la shows hidden files and detailed info  
+- ls -alt sorts by time  
+- ls -lah shows file sizes in human-readable format  
 
-<img width="884" height="609" alt="image" src="https://github.com/user-attachments/assets/a0d4ef46-526a-45d9-9f72-07916e36a33e" />
+![img](screenshots/Screenshot%202026-04-05%20154737.png)
+![img](screenshots/Screenshot%202026-04-05%20154810.png)
+![img](screenshots/Screenshot%202026-04-05%20154819.png)
 
-## Basic Linux Commands Practice
-Practised basic command-line operations including navigation (`cd`), creating directories (`mkdir`), and creating files (`touch`).
+### File Creation and Editing
+touch testfile  
+gedit testfile  
+nano testfile  
 
-<img width="817" height="577" alt="image" src="https://github.com/user-attachments/assets/487a5f08-9bd8-46dc-be58-9f5b3a3a8f6c" />
+Difference:
+- gedit is GUI-based  
+- nano works in terminal (used in servers)
 
-## Networking Configuration
-Configured the virtual machine network settings using NAT or Bridged mode to allow internet connectivity.
+![img](screenshots/Screenshot%202026-04-05%20150519.png)
 
-<img width="977" height="645" alt="image" src="https://github.com/user-attachments/assets/4f763c6c-00b7-4377-9356-12e0e10280e0" />
+### File Viewing
+cat testfile  
+less testfile  
+
+Difference:
+- cat prints full content  
+- less allows scrolling  
+
+![img](screenshots/Screenshot%202026-04-05%20150803.png)
+
+### File Operations
+cp testfile testfile2  
+mv testfile2 testfile3  
+rm testfile3  
+
+Difference:
+- cp copies files  
+- mv moves or renames files  
+- rm deletes files  
+
+Used:
+ls -lah (shows file sizes clearly)
+
+![img](screenshots/Screenshot%202026-04-05%20152147.png)
+
+### System Information
+uname -a  
+lsb_release -a  
+hostnamectl  
+
+Difference:
+- uname → kernel/system info  
+- lsb_release → OS version  
+- hostnamectl → system identity  
+
+![img](screenshots/Screenshot%202026-04-05%20152531.png)
+
+
+## Part 3: Super User and Permissions
+whoami  
+
+Attempted:
+adduser testuser (failed)  
+
+Used:
+sudo whoami  
+sudo adduser testuser  
+
+Explanation:
+- sudo provides temporary root (admin) access  
+
+![img]
+
+
+## Part 4: Network Configuration and DNS
+
+### Network Configuration
+ip a  
+ping 8.8.8.8  
+
+![img]
+
+### Hosts File
+less /etc/hosts  
+sudo nano /etc/hosts  
+
+Added entry and tested:
+ping GoogleEpicDNS  
+
+Explanation:
+- Hosts file maps domain names locally  
+
+![img]
+
+### DNS Lookup
+nslookup google.com  
+sudo apt install whois  
+whois google.com  
+
+Explanation:
+- DNS converts domain names to IP addresses  
+
+![img]
+
+
+## Part 5: System and Hardware Info
+lsusb  
+lspci  
+less /proc/cpuinfo  
+
+Compared CLI output with system GUI (“About This Computer”).
+
+![img]
+
+
+## Part 6: Software Installation Methods
+Installed software using:
+- Ubuntu Software Centre  
+- Downloaded .deb file (e.g., Chrome/Opera)  
+- Browser-based SaaS  
+
+Updated system:
+sudo apt update  
+sudo apt upgrade  
+
+Installed package:
+sudo apt install vlc  
+
+Searched packages:
+sudo apt search vlc  
+
+Viewed repositories:
+less /etc/apt/sources.list  
+
+![img]
