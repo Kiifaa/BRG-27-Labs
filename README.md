@@ -94,17 +94,13 @@ Differences observed:
 
 
 ## Part 3: Super User and Permissions
-whoami  
+Used `whoami` to check the current user account.  
+Attempted to create a new user using `adduser testuser`, which failed due to insufficient privileges.  
 
-Attempted:
-adduser testuser (failed)  
-
-Used:
-sudo whoami  
-sudo adduser testuser  
+Used `sudo whoami` to verify root access and successfully created a new user with `sudo adduser testuser`.
 
 Explanation:
-- sudo provides temporary root (admin) access  
+- `sudo` allows temporary elevation to root (administrator) privileges to perform restricted actions  
 
 ![img]
 
@@ -112,61 +108,56 @@ Explanation:
 ## Part 4: Network Configuration and DNS
 
 ### Network Configuration
-ip a  
-ping 8.8.8.8  
+Used `ip a` to display the system’s IP address and network interfaces.  
+Tested network connectivity using `ping 8.8.8.8`, confirming successful communication with an external server.
 
 ![img]
 
 ### Hosts File
-less /etc/hosts  
-sudo nano /etc/hosts  
-
-Added entry and tested:
-ping GoogleEpicDNS  
+Viewed the hosts file using `less /etc/hosts` and edited it using `sudo nano /etc/hosts`.  
+Added a custom hostname mapping and verified it using `ping GoogleEpicDNS`.
 
 Explanation:
-- Hosts file maps domain names locally  
+- The hosts file is used to map domain names to IP addresses locally on the system  
 
 ![img]
 
 ### DNS Lookup
-nslookup google.com  
-sudo apt install whois  
-whois google.com  
+Performed a DNS lookup using `nslookup google.com` to retrieve the IP address of the domain.  
+Installed the `whois` tool using `sudo apt install whois` and used `whois google.com` to retrieve domain registration details.
 
 Explanation:
-- DNS converts domain names to IP addresses  
+- DNS translates human-readable domain names into IP addresses required for network communication  
 
 ![img]
 
 
 ## Part 5: System and Hardware Info
-lsusb  
-lspci  
-less /proc/cpuinfo  
-
-Compared CLI output with system GUI (“About This Computer”).
+Used `lsusb`, `lspci`, and `less /proc/cpuinfo` to inspect hardware components and system information.  
+Compared the command-line outputs with the graphical system information available under “About This Computer”.
 
 ![img]
 
 
 ## Part 6: Software Installation Methods
-Installed software using:
-- Ubuntu Software Centre  
-- Downloaded .deb file (e.g., Chrome/Opera)  
-- Browser-based SaaS  
+Installed software using multiple methods to understand different approaches:
+- Ubuntu Software Centre (GUI-based installation)  
+- Downloaded and installed a `.deb` package (e.g., Chrome/Opera)  
+- Used browser-based SaaS applications  
 
-Updated system:
+Updated system packages using:
 sudo apt update  
 sudo apt upgrade  
 
-Installed package:
+Installed software using:
 sudo apt install vlc  
 
-Searched packages:
+Searched for packages using:
 sudo apt search vlc  
 
-Viewed repositories:
+Viewed repository sources using:
 less /etc/apt/sources.list  
+
+This demonstrates different methods of software installation in Linux systems.
 
 ![img]
