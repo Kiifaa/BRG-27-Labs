@@ -368,7 +368,7 @@ chgrp -R
 Explanation:
 - `-R` applies changes to all files and subdirectories  
 
-![img]
+![img](screenshots/Screenshot%202026-04-06%20000617.png)
 
 
 ## Part 7: Sudo Access for Mallory
@@ -384,10 +384,10 @@ sudo ls /root
 Explanation:
 - Sudo allows elevated privileges beyond normal user permissions  
 
-![img]
+![img](screenshots/Screenshot%202026-04-06%20000949.png)
 
 ## Part 8: Cleanup
 Removed directory and contents using:
 sudo rm -r /home/shared  
 
-![img]
+![img](screenshots/Screenshot%202026-04-06%20001116.png)
