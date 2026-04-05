@@ -294,8 +294,7 @@ sudo adduser mallory
 Verified users using:
 less /etc/passwd  
 
-![img]
-
+![img](screenshots/Screenshot%202026-04-05%20223738.png)
 
 ## Part 2: Group Configuration
 Created a group using `sudo groupadd sharedgroup`.  
@@ -306,8 +305,7 @@ sudo usermod -aG sharedgroup bob
 Verified using:
 less /etc/group  
 
-![img]
-
+![img](screenshots/Screenshot%202026-04-05%20224428.png)
 
 ## Part 3: Directory and File Setup
 Created a shared directory using:
@@ -319,7 +317,7 @@ sudo chgrp -R sharedgroup /home/shared
 Created files using:
 sudo touch /home/shared/file{1..10}  
 
-![img]
+![img](screenshots/Screenshot%202026-04-05%20224840.png)
 
 
 ## Part 4: Permission Assignment
@@ -336,8 +334,7 @@ Explanation:
 - 770 → full access for owner and group  
 - 750 → restricted access for others  
 
-![img]
-
+![img](screenshots/Screenshot%202026-04-05%20230758.png)
 
 ## Part 5: Access Verification
 Switched users and tested access:
@@ -359,7 +356,7 @@ Explanation:
 - Bob has limited access  
 - Mallory has no access (permission denied)  
 
-![img]
+![img](screenshots/Screenshot%202026-04-05%20231323.png)
 
 
 ## Part 6: Recursive Commands
