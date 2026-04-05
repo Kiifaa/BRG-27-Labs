@@ -175,3 +175,16 @@ Explanation:
 ![img](screenshots/Screenshot%202026-04-05%20174218.png)
 ![img](screenshots/Screenshot%202026-04-05%20174304.png)
 
+## Reflection Questions
+
+### Which file editors are best for remote access and why?
+Nano is more suitable for remote access because it works entirely in the terminal, which is important when accessing systems through SSH where a graphical interface is not available. In contrast, gedit requires a GUI, so it cannot be used in most remote server environments.
+
+### Compare software installation methods: SaaS vs binaries vs repos vs source
+SaaS applications are accessed through a browser and do not require installation, making them easy to use. Installing binaries such as `.deb` files is straightforward but may require manual handling of dependencies. Repository-based installation using `apt` is the most convenient and reliable, as it automatically manages dependencies and updates. Installing from source code provides the most flexibility but is more complex and requires technical knowledge.
+
+### What are pros/cons of each method from user and developer perspectives?
+From a user perspective, SaaS and repository installations are the easiest and most convenient. Binary installations are simple but less flexible, while source installation is more difficult. From a developer perspective, source code installation offers full control and customization, while repositories provide a balance between ease of use and distribution. SaaS allows developers to maintain full control over the application but requires continuous hosting.
+
+### How did using CLI improve your understanding of Linux?
+Using the command-line interface helped me better understand how Linux systems operate at a deeper level. It allowed me to see how commands directly interact with files, processes, and system settings, which is not always visible in a graphical interface. It also improved my confidence in managing systems without relying on a GUI.
