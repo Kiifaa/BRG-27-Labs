@@ -480,4 +480,4 @@ Explanation:
 - Smallest file: alice.txt
 - Oldest file: twocities.txt
 - Most frequent word: the
-![img](screenshots/Screenshot%202026-04-06%20013208.png)
+![img](screenshots/Screenshot%202026-04-06%20013551.png)
