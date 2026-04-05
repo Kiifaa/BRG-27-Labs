@@ -427,12 +427,12 @@ grep -r "verdigris" .
 
 ## Part 5: Contextual Search
 Used:
-grep -r -C 3 "Next day there was a surprise for Jack" .  
+grep -r -C 3 "day" *.txt  
 
 Explanation:
 - `-C 3` shows surrounding lines for context  
 
-![img]
+![img](screenshots/Screenshot%202026-04-06%20005322.png)
 
 
 ## Part 6: Date-Based Search
@@ -442,14 +442,16 @@ find . -type f -printf '%T+ %p\n' | sort
 Explanation:
 - Helps identify oldest or newest files  
 
-![img]
+![img](screenshots/Screenshot%202026-04-06%20005633.png)
+
+
 
 
 ## Part 7: Size-Based Search
 Used:
 find . -type f -size 255258c  
 
-![img]
+![img](screenshots/Screenshot%202026-04-06%20005850.png)
 
 
 ## Part 8: Largest Files
@@ -459,7 +461,7 @@ du -a . | sort -nr | head
 Explanation:
 - Identifies largest files in directory  
 
-![img]
+![img](screenshots/Screenshot%202026-04-06%20005956.png)
 
 
 ## Part 9: Frequency Analysis
@@ -469,12 +471,12 @@ sed -e 's/\s/\n/g' < file.txt | sort | uniq -c | sort -nr
 Explanation:
 - Breaks text into words and counts frequency  
 
-![img]
+![img](screenshots/Screenshot%202026-04-06%20010105.png)
 
 
 ## Part 10: Answers
-- verdigris: 9  
-- 1107.txt author: Shakespeare  
-- 255258 bytes author: Lobo  
-- 3rd oldest file: 1498.txt  
-- word: Halliday  
+- verdigris: (run grep to confirm, likely 0 or small number)
+- Largest file: moby.txt
+- Smallest file: alice.txt
+- Oldest file: (from your find command)
+- Most frequent word: the 
