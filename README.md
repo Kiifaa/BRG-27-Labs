@@ -126,7 +126,8 @@ Explanation:
 ### DNS Lookup
 Performed a DNS lookup using `nslookup google.com` to retrieve the IP address of the domain.  
 Installed the `whois` tool using `sudo apt install whois` and used `whois google.com` to retrieve domain registration details.
-Compare public/private IP via https://whatismyipaddress.com/.
+
+Compare public/private IP via `https://whatismyipaddress.com/`.
 
 Explanation:
 - DNS translates human-readable domain names into IP addresses required for network communication  
@@ -188,3 +189,96 @@ From a user perspective, SaaS and repository installations are the easiest and m
 
 ### How did using CLI improve your understanding of Linux?
 Using the command-line interface helped me better understand how Linux systems operate at a deeper level. It allowed me to see how commands directly interact with files, processes, and system settings, which is not always visible in a graphical interface. It also improved my confidence in managing systems without relying on a GUI.
+
+# Lab 1b-1 – Linux Services, SSH, Firewalls & Compression
+
+## Part 1: Apache Web Server Installation
+Updated package lists using `sudo apt update` and installed Apache using `sudo apt install apache2`.  
+Verified the web server by accessing `http://127.0.0.1` in a browser, confirming the default Apache page was displayed.
+
+![img](screenshots/Screenshot%202026-04-05%20203825.png)
+![img](screenshots/Screenshot%202026-04-05%20203856.png)
+
+## Part 2: Web Page Modification
+Edited the default web page using `nano /var/www/html/index.html` (or `gedit`).  
+Saved changes and verified them by refreshing the browser.
+
+Explanation:
+- Administrative permissions are required to modify files in `/var/www/html`
+
+![img](screenshots/Screenshot%202026-04-05%20205221.png)
+
+
+## Part 3: IP Address Identification
+Used `ip a` to identify the system’s IP address and network interfaces.  
+Also observed the loopback address `127.0.0.1`, which refers to the local machine.
+
+![img](screenshots/Screenshot%202026-04-05%20205420.png)
+
+
+## Part 4: Nmap Port Scanning
+Installed Nmap using `sudo apt install nmap` and scanned a machine using `nmap [IP]`.  
+Observed open ports and running services.
+
+Removed Apache using `sudo apt remove apache2` and repeated the scan to observe changes in open ports.
+
+Explanation:
+- Nmap identifies open ports and active services on a system  
+
+![img](screenshots/Screenshot%202026-04-05%20205831.png)
+![img](screenshots/Screenshot%202026-04-05%20205944.png)
+
+
+## Part 5: Firewall Configuration (UFW)
+Checked firewall status using `sudo ufw status verbose`.  
+Enabled firewall using `sudo ufw enable` and allowed HTTP traffic using `sudo ufw allow 80/tcp`.
+
+Rechecked firewall status to confirm rules were applied.
+
+Explanation:
+- UFW controls network access by allowing or blocking specific ports  
+
+![img](screenshots/Screenshot%202026-04-05%20210312.png)
+
+
+## Part 6: SSH Access
+Installed SSH server using `sudo apt install openssh-server`.  
+Connected to another machine using `ssh username@ip`.
+
+Explanation:
+- SSH provides secure remote access to another system  
+
+![img](screenshots/Screenshot%202026-04-05%20210717.png)
+![img](screenshots/Screenshot%202026-04-05%20210809.png)
+
+## Part 7: User Creation
+Viewed existing users using `less /etc/passwd`.  
+Created a new user using `sudo adduser username` and verified changes in the system file.
+
+![img](screenshots/Screenshot%202026-04-05%20211111.png)
+![img](screenshots/Screenshot%202026-04-05%20211332.png)
+![img](screenshots/Screenshot%202026-04-05%20211306.png)
+
+## Part 8: Compression and Decompression
+Downloaded files and organised them into a directory using `mkdir` and `mv`.  
+Created an archive using `tar cf books.tar books` and compressed it using `bzip2 books.tar`.
+
+Decompressed using:
+bunzip2 books.tar.bz2  
+tar -xvf books.tar  
+
+Explanation:
+- Compression reduces file size and makes transfer easier  
+
+![img](screenshots/Screenshot%202026-04-05%20212315.png)
+![img](screenshots/Screenshot%202026-04-05%20212412.png)
+![img](screenshots/Screenshot%202026-04-05%20212512.png)
+
+## Part 9: SCP File Transfer
+Transferred files between systems using:
+scp file.txt user@ip:/destination  
+
+Explanation:
+- SCP securely copies files over a network using SSH  
+
+![img](screenshots/Screenshot%202026-04-05%20212922.png)
