@@ -3,97 +3,92 @@
 # Lab 1a-1 – Virtualisation and Linux Setup
 
 ## 1. VirtualBox Installed
-Installed Oracle VirtualBox on my system to create and run a virtual machine.
+Installed Oracle VirtualBox on my system to create and run a virtual machine environment.
 
 ![img](screenshots/Screenshot%202026-04-05%20140810.png)
 
 ## 2. Ubuntu ISO Downloaded
-Downloaded the Ubuntu ISO file from the official Ubuntu website to use for installation.
+Downloaded the Ubuntu ISO file from the official Ubuntu website to use for the virtual machine installation.
 
 ![img](screenshots/Screenshot%202026-04-05%20141156.png)
+
 
 # Lab 1a-2 – Ubuntu Desktop and Command Line Familiarisation
 
 ## Part 1: Ubuntu Desktop GUI Familiarisation
-- Opened Firefox and confirmed internet access  
-- Opened LibreOffice and typed a document  
-- Navigated directories using File Manager  
-- Installed a program via Ubuntu Software Centre  
+Opened Firefox to verify internet connectivity.  
+Launched LibreOffice and created a document to confirm application functionality.  
+Used the File Manager to navigate directories and understand the file structure.  
+Installed a program using the Ubuntu Software Centre to test software installation.
 
 ![img](screenshots/Screenshot%202026-04-05%20144736.png)
+
 
 ## Part 2: CLI Basics and File Operations
 
 ### Process Monitoring
-ps -e  
-top  
-
-Pressed `1` in top to display CPU usage per core.
+Executed `ps -e` to display running processes and used `top` to monitor system performance in real-time.  
+Pressed `1` in `top` to display CPU usage across multiple cores.
 
 ![img](screenshots/Screenshot%202026-04-05%20145000.png)
 ![img](screenshots/Screenshot%202026-04-05%20145146.png)
 
-### File Listing
-ls  
-ls -la  
-ls -alt  
-ls -lah  
 
-Difference:
-- ls shows basic files  
-- ls -la shows hidden files and detailed info  
-- ls -alt sorts by time  
-- ls -lah shows file sizes in human-readable format  
+### File Listing
+Used `ls`, `ls -la`, `ls -alt`, and `ls -lah` to explore directory contents.
+
+Differences observed:
+- `ls` displays basic files and directories  
+- `ls -la` includes hidden files and detailed permissions  
+- `ls -alt` sorts files by modification time  
+- `ls -lah` displays file sizes in a human-readable format  
 
 ![img](screenshots/Screenshot%202026-04-05%20154737.png)
 ![img](screenshots/Screenshot%202026-04-05%20154810.png)
 ![img](screenshots/Screenshot%202026-04-05%20154819.png)
 
-### File Creation and Editing
-touch testfile  
-gedit testfile  
-nano testfile  
 
-Difference:
-- gedit is GUI-based  
-- nano works in terminal (used in servers)
+### File Creation and Editing
+Created a file using `touch testfile`.  
+Edited the file using both `gedit` and `nano`.
+
+Differences observed:
+- `gedit` is a graphical text editor  
+- `nano` is a terminal-based editor suitable for remote systems  
 
 ![img](screenshots/Screenshot%202026-04-05%20150519.png)
 
-### File Viewing
-cat testfile  
-less testfile  
 
-Difference:
-- cat prints full content  
-- less allows scrolling  
+### File Viewing
+Used `cat testfile` and `less testfile` to view file contents.
+
+Differences observed:
+- `cat` displays the entire file output at once  
+- `less` allows scrolling through the file content  
 
 ![img](screenshots/Screenshot%202026-04-05%20150803.png)
 
+
 ### File Operations
-cp testfile testfile2  
-mv testfile2 testfile3  
-rm testfile3  
+Used `cp` to duplicate files, `mv` to rename or move files, and `rm` to delete files.
 
-Difference:
-- cp copies files  
-- mv moves or renames files  
-- rm deletes files  
+Differences observed:
+- `cp` creates a copy of the file  
+- `mv` moves or renames the file  
+- `rm` permanently deletes the file  
 
-Used:
-ls -lah (shows file sizes clearly)
+Used `ls -lah` to verify file changes and sizes.
 
 ![img](screenshots/Screenshot%202026-04-05%20152147.png)
 
-### System Information
-uname -a  
-lsb_release -a  
-hostnamectl  
 
-Difference:
-- uname → kernel/system info  
-- lsb_release → OS version  
-- hostnamectl → system identity  
+### System Information
+Executed `uname -a`, `lsb_release -a`, and `hostnamectl` to retrieve system information.
+
+Differences observed:
+- `uname -a` provides kernel and system details  
+- `lsb_release -a` shows distribution and version information  
+- `hostnamectl` displays system identity and hostname details  
 
 ![img](screenshots/Screenshot%202026-04-05%20152531.png)
 
