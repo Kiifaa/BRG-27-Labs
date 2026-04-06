@@ -882,3 +882,41 @@ cp $now.zip /home/ubuntu/
 scp -i /home/ubuntu/key.pem $now.zip ubuntu@<your-server-ip>:/home/ubuntu/  
 
 ![img](screenshots/Screenshot%202026-04-07%20022252.png)
+
+# Lab 3b-2 – Additional Server Services and Cloud Alternatives
+
+## Part 1: Additional Server Service Installation
+
+### Docker Installation
+Installed Docker as the selected additional server service.
+
+Commands used:
+sudo apt update  
+sudo apt install -y docker.io  
+
+Started and enabled Docker service:
+sudo systemctl start docker  
+sudo systemctl enable docker  
+
+Verified installation:
+docker --version  
+sudo docker run hello-world  
+
+Explanation:
+- Docker allows applications to run in isolated containers and is commonly used in modern DevOps environments  
+
+![img](screenshots/Screenshot%202026-04-07%20024028.png)
+
+
+## Part 2: Cloud Technology Alternatives
+
+Compared major cloud providers including AWS, Google Cloud, and Microsoft Azure.
+
+Summary:
+- AWS provides the widest range of services and has strong global infrastructure coverage  
+- Google Cloud offers strong support for container-based applications and advanced AI/ML tools  
+- Microsoft Azure integrates well with enterprise environments, especially those using Windows Server and Microsoft services  
+
+Explanation:
+- Cloud platforms provide managed infrastructure and services, reducing the need for manual server setup, maintenance, and hardware management  
+- They improve scalability, reliability, and accessibility compared to traditional on-premise systems
