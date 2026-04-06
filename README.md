@@ -691,7 +691,7 @@ Explanation:
 - Domain is linked via DNS A record
 - Website is accessible via HTTP
 
-![img]
+![img](screenshots/Screenshot%202026-04-07%20003639.png)
 
 
 ## Part 2: Certbot Installed via Snap
@@ -702,7 +702,7 @@ Explanation:
 - Snap installs the latest version of Certbot
 - Required for generating SSL/TLS certificates
 
-![img]
+![img](screenshots/Screenshot%202026-04-07%20004722.png)
 
 
 ## Part 3: Certificate Successfully Issued
@@ -713,29 +713,20 @@ Explanation:
 - Let’s Encrypt issued the certificate
 - Apache was automatically configured
 
-![img]
+![img](screenshots/Screenshot%202026-04-07%20005114.png)
 
 
-## Part 4: HTTPS Enabled on Apache
-Verified secure access:
-https://kiifaalab.duckdns.org
-
-Explanation:
-- Website now supports HTTPS
-- Traffic is encrypted using TLS
-
-![img]
-
-
-## Part 5: Browser Lock Icon (Secure Connection)
+## Part 4 & 5: HTTPS Enabled and Secure Connection (Lock Icon)
 Accessed site via HTTPS:
 https://kiifaalab.duckdns.org
 
 Explanation:
-- Padlock icon is visible in address bar
-- Confirms secure connection
+- Website successfully loads over HTTPS
+- Traffic is encrypted using TLS
+- Padlock icon is visible in the browser address bar
+- Confirms the connection is secure
 
-![img]
+![img](screenshots/Screenshot%202026-04-07%20005232.png)
 
 ## Part 6: View Certificate Issuer
 Checked certificate details in browser
@@ -744,7 +735,7 @@ Explanation:
 - Issuer is Let's Encrypt
 - Certificate is valid and trusted
 
-![img]
+![img](screenshots/Screenshot%202026-04-07%20005559.png)
 
 
 ## Part 7: Certbot Auto-Renewal Dry Run Successful
@@ -755,4 +746,4 @@ Explanation:
 - Output shows "Congratulations, all renewals succeeded."
 - Confirms automatic renewal is working
 
-![img]
+![img](screenshots/Screenshot%202026-04-07%20005836.png)
