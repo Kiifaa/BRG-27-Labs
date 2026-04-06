@@ -642,38 +642,41 @@ Captured the output of `nslookup yourdomain.com` or `dig yourdomain.com` showing
 ## Activity 2: Let's Encrypt TLS Certificate Setup
 
 ### 1. Certbot Installed
-Installed Certbot and Apache plugin using:
-sudo apt install certbot python3-certbot-apache
+Certbot and the Apache plugin were installed using:
 
-![img]
+`sudo apt install certbot python3-certbot-apache`
+
+The installation was verified by checking the Certbot version.
+
+![img](screenshots/Screenshot%202026-04-06%20233404.png)
 
 ### 2. HTTPS Enabled on Domain
-Configured HTTPS using Certbot and verified that the site loads securely with a lock icon.
+Configured HTTPS using Certbot to enable secure access to the domain.
 
 Command used:
-sudo certbot --apache
-
-![img]
+sudo certbot --apache -d kiifaalab.duckdns.org
 
 ### 3. Valid TLS Certificate
 Verified that a valid TLS certificate issued by Let’s Encrypt is active on the domain.
 
-![img]
+![img](screenshots/Screenshot%202026-04-06%20235249.png)
 
 ### 4. Screenshot: HTTPS with Lock Icon
 Captured browser screenshot showing HTTPS lock icon and certificate details.
 
-![img]
+![img](screenshots/Screenshot%202026-04-07%20000726.png)
 
 ### 5. Screenshot: Certbot Success Message
 Captured terminal output showing successful execution of:
 sudo certbot --apache
 
-![img]
+![img](screenshots/Screenshot%202026-04-07%20001611.png)
 
 ### 6. Screenshot: Renewal Dry-Run Output
-Executed and captured output of:
-sudo certbot renew --dry-run  
-to verify automatic renewal works.
+Executed the following command to test automatic certificate renewal:
 
-![img]
+sudo certbot renew --dry-run
+
+The dry-run process was initiated successfully. However, the simulation returned a DNS validation error (SERVFAIL when checking CAA records for the DuckDNS domain). This indicates a temporary DNS-related issue rather than a problem with the web server configuration, as the website remains accessible over HTTPS.
+
+![img](screenshots/Screenshot%202026-04-07%20002050.png)
