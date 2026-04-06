@@ -481,3 +481,28 @@ Explanation:
 - Oldest file: twocities.txt
 - Most frequent word: the
 ![img](screenshots/Screenshot%202026-04-06%20013551.png)
+
+# Lab 2a – Total Cost of Ownership (TCO)
+
+## Part 1: TCO Analysis
+
+Performed a Total Cost of Ownership (TCO) analysis by comparing two printers over a 5-year period.
+
+Used a spreadsheet to calculate costs including:
+- Fixed costs (printer)
+- Variable costs (ink/toner, paper, electricity, servicing)
+
+Applied assumptions such as:
+- 5 years usage
+- 750 pages per week
+
+Calculated total cost and compared both printers to determine the more cost-effective option.
+
+![img](screenshots/Screenshot%202026-04-06%20160105.png)
+
+## Part 2: Reflection
+
+- The inkjet printer is more cost-effective due to lower running costs.
+- For a home user printing fewer pages, the cost difference would be smaller.
+- Other factors include print speed, reliability, and maintenance.
+- For large organisations, cost per page and durability are important.
