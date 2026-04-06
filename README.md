@@ -1,6 +1,6 @@
 # BRG-27 — Infrastructure Systems Engineering Activity (ISEA)
 
----
+-
 
 Student: Kiefer  
 Kaplan ID: XXXXXXXX  
