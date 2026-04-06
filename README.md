@@ -622,22 +622,21 @@ Created a DNS A record pointing the domain name to the public IP address of the 
 ### 3. Apache Installed
 Installed Apache using `sudo apt install apache2` and confirmed it was running and accessible on port 80.
 
+![img](screenshots/Screenshot%202026-04-06%20232832.png)
+
+### 4 & 5. Public IP to Domain Mapping Verified & Screenshot: Apache Welcome Page via Domain
+The domain `kiifaalab.duckdns.org` was successfully mapped to the server’s public IP address.
+
+This was verified using `nslookup`, which confirmed correct DNS resolution, and browser testing, which confirmed successful access to the web server.
+
+Accessed `http://kiifaalab.duckdns.org` and confirmed the Apache default page loads successfully via the domain.
+
 ![img](screenshots/Screenshot%202026-04-06%20231331.png)
-
-### 4. Public IP to Domain Mapping Verified
-Verified that the domain correctly resolves to the server’s public IP using `nslookup`, `dig`, and browser testing.
-
-![img]
-
-### 5. Screenshot: Apache Welcome Page via Domain
-Accessed `http://yourdomain.com` and confirmed the Apache default page loads successfully via the domain.
-
-![img]
 
 ### 6. Screenshot: DNS Test Output
 Captured the output of `nslookup yourdomain.com` or `dig yourdomain.com` showing correct IP resolution.
 
-![img]
+![img](screenshots/Screenshot%202026-04-06%20225416.png)
 
 
 ## Activity 2: Let's Encrypt TLS Certificate Setup
