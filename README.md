@@ -680,3 +680,79 @@ sudo certbot renew --dry-run
 The dry-run process was initiated successfully. However, the simulation returned a DNS validation error (SERVFAIL when checking CAA records for the DuckDNS domain). This indicates a temporary DNS-related issue rather than a problem with the web server configuration, as the website remains accessible over HTTPS.
 
 ![img](screenshots/Screenshot%202026-04-07%20002050.png)
+
+# Lab 3a-2 – Enabling HTTPS with Let's Encrypt & Certbot
+
+## Part 1: Pre-Condition Verified – Domain Points to Server
+Tested domain access using:
+http://kiifaalab.duckdns.org
+
+Explanation:
+- Domain is linked via DNS A record
+- Website is accessible via HTTP
+
+![img]
+
+
+## Part 2: Certbot Installed via Snap
+Installed Certbot using:
+sudo snap install --classic certbot
+
+Explanation:
+- Snap installs the latest version of Certbot
+- Required for generating SSL/TLS certificates
+
+![img]
+
+
+## Part 3: Certificate Successfully Issued
+Generated certificate using:
+sudo certbot --apache
+
+Explanation:
+- Let’s Encrypt issued the certificate
+- Apache was automatically configured
+
+![img]
+
+
+## Part 4: HTTPS Enabled on Apache
+Verified secure access:
+https://kiifaalab.duckdns.org
+
+Explanation:
+- Website now supports HTTPS
+- Traffic is encrypted using TLS
+
+![img]
+
+
+## Part 5: Browser Lock Icon (Secure Connection)
+Accessed site via HTTPS:
+https://kiifaalab.duckdns.org
+
+Explanation:
+- Padlock icon is visible in address bar
+- Confirms secure connection
+
+![img]
+
+## Part 6: View Certificate Issuer
+Checked certificate details in browser
+
+Explanation:
+- Issuer is Let's Encrypt
+- Certificate is valid and trusted
+
+![img]
+
+
+## Part 7: Certbot Auto-Renewal Dry Run Successful
+Tested renewal using:
+sudo certbot renew --dry-run
+
+Explanation:
+- Output shows "Congratulations, all renewals succeeded."
+- Confirms automatic renewal is working
+
+![img]
