@@ -673,13 +673,13 @@ sudo certbot --apache
 ![img](screenshots/Screenshot%202026-04-07%20001611.png)
 
 ### 6. Screenshot: Renewal Dry-Run Output
-Executed the following command to test automatic certificate renewal:
+Executed the following command to verify that automatic certificate renewal works correctly:
 
 sudo certbot renew --dry-run
 
-The dry-run process was initiated successfully. However, the simulation returned a DNS validation error (SERVFAIL when checking CAA records for the DuckDNS domain). This indicates a temporary DNS-related issue rather than a problem with the web server configuration, as the website remains accessible over HTTPS.
+The dry-run simulation was successful, confirming that the certificate can be automatically renewed without errors.
 
-![img](screenshots/Screenshot%202026-04-07%20002050.png)
+![img](screenshots/Screenshot%202026-04-07%20005836.png)
 
 # Lab 3a-2 – Enabling HTTPS with Let's Encrypt & Certbot
 
