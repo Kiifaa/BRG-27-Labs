@@ -2,11 +2,11 @@
 
 ---
 
-Student: Toh Wen Kiat, Kiefer 
-Kaplan ID: ct0385055  
-Murdoch ID: 35763917  
-Module: BRG-27 Introduction to Server Environments and Architectures  
-Host OS: Windows 11 Pro  
+Student: Toh Wen Kiat, Kiefer <br>
+Kaplan ID: ct0385055 <br>
+Murdoch ID: 35763917 <br>
+Module: BRG-27 Introduction to Server Environments and Architectures <br>
+Host OS: Windows 11 Pro <br>
 Linux Environment: Ubuntu 24.04.4 LTS
 
 ---
