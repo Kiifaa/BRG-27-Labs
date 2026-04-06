@@ -554,7 +554,7 @@ Executed the script using:
 
 The script successfully displayed the custom output.
 
-![img](main/screenshots/Screenshot%202026-04-06%20201943.png)
+![img](screenshots/Screenshot%202026-04-06%20201943.png)
 
 
 ## Part 4: Reflection – Script Basics
