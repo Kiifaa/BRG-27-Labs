@@ -765,7 +765,7 @@ do
 done  
 echo $sum  
 
-![img]
+![img](screenshots/Screenshot%202026-04-07%20013142.png)
 
 
 ## Part 2: Test Files & Directories Created
@@ -781,7 +781,7 @@ touch file11 file22 file33 file44 file55
 Verified using:
 ls -R /home/ubuntu/Documents  
 
-![img]
+![img](screenshots/Screenshot%202026-04-07%20013900.png)
 
 
 ## Part 3: Basic Script Working (testscript)
@@ -799,7 +799,7 @@ chmod 777 /home/ubuntu/testscript
 Executed:
 ./testscript  
 
-![img]
+![img](screenshots/Screenshot%202026-04-07%20014548.png)
 
 
 ## Part 4: Script Moved to /usr/bin and Tested
@@ -812,7 +812,7 @@ sudo chown ubuntu /usr/bin/testscript
 Tested:
 testscript  
 
-![img]
+![img](screenshots/Screenshot%202026-04-07%20014919.png)
 
 
 ## Part 5: ZIP Archive with Date Filename
