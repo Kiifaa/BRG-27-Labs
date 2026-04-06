@@ -1,4 +1,13 @@
-# BRG-27 Lab Activities
+# BRG-27 — Infrastructure Systems Engineering Activity (ISEA)
+
+---
+
+Student: Kiefer  
+Kaplan ID: XXXXXXXX  
+Murdoch ID: XXXXXXXX  
+Module: BRG-27 Introduction to Server Environments and Architectures  
+Host OS: Windows 11 Pro  
+Linux Environment: Ubuntu 24.04.4 LTS via WSL 2
 
 # Lab 1a-1 – Virtualisation and Linux Setup
 
