@@ -521,3 +521,84 @@ Checked the AWS billing dashboard and reviewed cost monitoring to avoid unexpect
 - File permissions are important for accessing files correctly.
 - Leaving instances running may result in additional costs.
 - DNS resolves domain names globally, while `/etc/hosts` is local.
+
+# Lab 2b-2 – Linux Bash Scripting & Automation
+
+## Part 1: Directory and File Operations
+Created a working directory using `mkdir LabFiles` and navigated into it.  
+Created a file using `touch notes.txt` and used commands such as `cat`, `cp`, `mv`, and `rm` to manage file contents and structure.
+
+This demonstrated basic file system operations in Linux.
+
+![img](screenshots/Screenshot%202026-04-06%20201620.png)
+
+
+## Part 2: Reflection – File System Commands
+
+- Command used to create a directory: `mkdir`  
+- File content can be viewed using `cat` or `less` without a GUI editor  
+- `cp` creates a copy of a file, while `mv` moves or renames a file
+
+
+## Part 3: Basic Bash Script Creation
+Created a script named `hello_world.sh` with the following:
+
+- Added `#!/bin/bash` at the top to define the interpreter  
+- Used `echo` to print a custom message  
+
+Made the script executable using:
+chmod 777 hello_world.sh  
+
+Executed the script using:
+./hello_world.sh  
+
+The script successfully displayed the custom output.
+
+![img](main/screenshots/Screenshot%202026-04-06%20201943.png)
+
+
+## Part 4: Reflection – Script Basics
+
+- `chmod +x` allows a script to be executed as a program  
+- `#!/bin/bash` specifies that the script should run using the Bash shell  
+- Script output can be personalised by modifying the `echo` statement  
+
+
+## Part 5: Loop and Conditional Script
+Created a script named `system_info.sh` that:
+
+- Displays the current user using `whoami`  
+- Uses a `for` loop to iterate from 1 to 5  
+- Accepts user input using `read`  
+- Applies if, elif, and else conditions to evaluate the input, including basic validation
+
+This demonstrates control flow and interaction within Bash scripts.
+
+![img]
+
+
+## Part 6: Reflection – Loops and Conditionals
+
+- A `for` loop repeats a set of commands for a defined range of values  
+- If a number greater than 10 is entered, the condition will trigger the corresponding `elif` or `else` block  
+- Invalid input can be handled more effectively using input validation (e.g., checking if input is numeric)  
+
+
+## Part 7: System Monitoring Script
+Created a script named `resource_monitor.sh` to automate system monitoring tasks.
+
+The script uses:
+- `top` to monitor CPU usage  
+- `free -h` to display memory usage  
+- `df -h` to show disk usage  
+
+Included looping and delays using `sleep` to continuously monitor the system.
+
+![img]
+
+
+## Part 8: Reflection – Monitoring Automation
+
+- `free -h` shows memory usage in a human-readable format  
+- Network usage can be monitored by adding tools such as `iftop` or `nload` into the script  
+- Automation is important because it allows system administrators to monitor and manage systems efficiently without manual repetition  
