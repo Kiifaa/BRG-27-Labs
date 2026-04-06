@@ -921,8 +921,6 @@ Explanation:
 - Cloud platforms provide managed infrastructure and services, reducing the need for manual server setup, maintenance, and hardware management  
 - They improve scalability, reliability, and accessibility compared to traditional on-premise systems
 
-# Lab 4a-1 – Additional Server Services
-
 ## Selected Service: Docker
 
 Docker is a containerization platform used to deploy and run applications in isolated environments known as containers. Each container includes all the necessary dependencies, libraries, and configurations required for the application to run, ensuring consistency across different systems.
@@ -934,5 +932,3 @@ The purpose of Docker is to provide a lightweight and portable solution for appl
 Docker was selected as the additional server service because it is easy to install, widely adopted in the industry, and highly relevant to modern server and cloud environments. It also integrates well with other technologies and supports scalable system design.
 
 The installation and functionality of Docker were verified using the commands `docker --version` and `sudo docker run hello-world`, which confirmed that the Docker service is running correctly and able to execute containers.
-
-![img](screenshots/Screenshot%202026-04-07%20024028.png)
