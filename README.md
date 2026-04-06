@@ -601,4 +601,80 @@ Included looping and delays using `sleep` to continuously monitor the system.
 
 - `free -h` shows memory usage in a human-readable format  
 - Network usage can be monitored by adding tools such as `iftop` or `nload` into the script  
-- Automation is important because it allows system administrators to monitor and manage systems efficiently without manual repetition  
+- Automation is important because it allows system administrators to monitor and manage systems efficiently without manual repetition
+
+# Lab 3a-1 – Domain, DNS and TLS Certificates
+
+## Activity 1: Domain, DNS
+
+## 1. Domain Name / Subdomain Registered
+A free subdomain was registered using DuckDNS as a DNS provider.
+
+The domain `kiifaalab.duckdns.org` was created and configured to point to the VM’s public IP address.
+
+![img](screenshots/Screenshot%202026-04-06%20224948.png)
+
+### 2. A Record Created
+Created a DNS A record pointing the domain name to the public IP address of the virtual machine.
+
+![img](screenshots/Screenshot%202026-04-06%20225416.png)
+
+### 3. Apache Installed
+Installed Apache using `sudo apt install apache2` and confirmed it was running and accessible on port 80.
+
+![img](screenshots/Screenshot%202026-04-06%20231331.png)
+
+### 4. Public IP to Domain Mapping Verified
+Verified that the domain correctly resolves to the server’s public IP using `nslookup`, `dig`, and browser testing.
+
+![img]
+
+### 5. Screenshot: Apache Welcome Page via Domain
+Accessed `http://yourdomain.com` and confirmed the Apache default page loads successfully via the domain.
+
+![img]
+
+### 6. Screenshot: DNS Test Output
+Captured the output of `nslookup yourdomain.com` or `dig yourdomain.com` showing correct IP resolution.
+
+![img]
+
+
+## Activity 2: Let's Encrypt TLS Certificate Setup
+
+### 1. Certbot Installed
+Installed Certbot and Apache plugin using:
+sudo apt install certbot python3-certbot-apache
+
+![img]
+
+### 2. HTTPS Enabled on Domain
+Configured HTTPS using Certbot and verified that the site loads securely with a lock icon.
+
+Command used:
+sudo certbot --apache
+
+![img]
+
+### 3. Valid TLS Certificate
+Verified that a valid TLS certificate issued by Let’s Encrypt is active on the domain.
+
+![img]
+
+### 4. Screenshot: HTTPS with Lock Icon
+Captured browser screenshot showing HTTPS lock icon and certificate details.
+
+![img]
+
+### 5. Screenshot: Certbot Success Message
+Captured terminal output showing successful execution of:
+sudo certbot --apache
+
+![img]
+
+### 6. Screenshot: Renewal Dry-Run Output
+Executed and captured output of:
+sudo certbot renew --dry-run  
+to verify automatic renewal works.
+
+![img]
