@@ -12,7 +12,6 @@ Downloaded the Ubuntu ISO file from the official Ubuntu website to use for the v
 
 ![img](screenshots/Screenshot%202026-04-05%20141156.png)
 
-
 # Lab 1a-2 – Ubuntu Desktop and Command Line Familiarisation
 
 ## Part 1: Ubuntu Desktop GUI Familiarisation
@@ -23,7 +22,6 @@ Installed a program using the Ubuntu Software Centre to test software installati
 
 ![img](screenshots/Screenshot%202026-04-05%20144736.png)
 
-
 ## Part 2: CLI Basics and File Operations
 
 ### Process Monitoring
@@ -32,7 +30,6 @@ Pressed `1` in `top` to display CPU usage across multiple cores.
 
 ![img](screenshots/Screenshot%202026-04-05%20145000.png)
 ![img](screenshots/Screenshot%202026-04-05%20145146.png)
-
 
 ### File Listing
 Used `ls`, `ls -la`, `ls -alt`, and `ls -lah` to explore directory contents.
@@ -47,7 +44,6 @@ Differences observed:
 ![img](screenshots/Screenshot%202026-04-05%20154810.png)
 ![img](screenshots/Screenshot%202026-04-05%20154819.png)
 
-
 ### File Creation and Editing
 Created a file using `touch testfile`.  
 Edited the file using both `gedit` and `nano`.
@@ -58,7 +54,6 @@ Differences observed:
 
 ![img](screenshots/Screenshot%202026-04-05%20150519.png)
 
-
 ### File Viewing
 Used `cat testfile` and `less testfile` to view file contents.
 
@@ -67,7 +62,6 @@ Differences observed:
 - `less` allows scrolling through the file content  
 
 ![img](screenshots/Screenshot%202026-04-05%20150803.png)
-
 
 ### File Operations
 Used `cp` to duplicate files, `mv` to rename or move files, and `rm` to delete files.
@@ -81,7 +75,6 @@ Used `ls -lah` to verify file changes and sizes.
 
 ![img](screenshots/Screenshot%202026-04-05%20152147.png)
 
-
 ### System Information
 Executed `uname -a`, `lsb_release -a`, and `hostnamectl` to retrieve system information.
 
@@ -91,7 +84,6 @@ Differences observed:
 - `hostnamectl` displays system identity and hostname details  
 
 ![img](screenshots/Screenshot%202026-04-05%20152531.png)
-
 
 ## Part 3: Super User and Permissions
 Used `whoami` to check the current user account.  
@@ -103,7 +95,6 @@ Explanation:
 - `sudo` allows temporary elevation to root (administrator) privileges to perform restricted actions  
 
 ![img](screenshots/Screenshot%202026-04-05%20170119.png)
-
 
 ## Part 4: Network Configuration and DNS
 
@@ -136,14 +127,12 @@ Explanation:
 ![img](screenshots/Screenshot%202026-04-05%20171732.png)
 ![img](screenshots/Screenshot%202026-04-05%20172114.png)
 
-
 ## Part 5: System and Hardware Info
 Used `lsusb`, `lspci`, and `less /proc/cpuinfo` to inspect hardware components and system information.  
 Compared the command-line outputs with the graphical system information available under “About This Computer”.
 Used output redirection to save command output into a file using `lsusb > output_of_lsusb`, and viewed it using `less` and `cat`, then removed it using `rm`.
 
 ![img](screenshots/Screenshot%202026-04-05%20172616.png)
-
 
 ## Part 6: Software Installation Methods
 
@@ -208,13 +197,11 @@ Explanation:
 
 ![img](screenshots/Screenshot%202026-04-05%20205221.png)
 
-
 ## Part 3: IP Address Identification
 Used `ip a` to identify the system’s IP address and network interfaces.  
 Also observed the loopback address `127.0.0.1`, which refers to the local machine.
 
 ![img](screenshots/Screenshot%202026-04-05%20205420.png)
-
 
 ## Part 4: Nmap Port Scanning
 Installed Nmap using `sudo apt install nmap` and scanned a machine using `nmap [IP]`.  
@@ -228,7 +215,6 @@ Explanation:
 ![img](screenshots/Screenshot%202026-04-05%20205831.png)
 ![img](screenshots/Screenshot%202026-04-05%20205944.png)
 
-
 ## Part 5: Firewall Configuration (UFW)
 Checked firewall status using `sudo ufw status verbose`.  
 Enabled firewall using `sudo ufw enable` and allowed HTTP traffic using `sudo ufw allow 80/tcp`.
@@ -239,7 +225,6 @@ Explanation:
 - UFW controls network access by allowing or blocking specific ports  
 
 ![img](screenshots/Screenshot%202026-04-05%20210312.png)
-
 
 ## Part 6: SSH Access
 Installed SSH server using `sudo apt install openssh-server`.  
@@ -319,7 +304,6 @@ sudo touch /home/shared/file{1..10}
 
 ![img](screenshots/Screenshot%202026-04-05%20224840.png)
 
-
 ## Part 4: Permission Assignment
 Set directory permissions using:
 sudo chmod -R 770 /home/shared  
@@ -358,7 +342,6 @@ Explanation:
 
 ![img](screenshots/Screenshot%202026-04-05%20231323.png)
 
-
 ## Part 6: Recursive Commands
 Applied recursive permission changes using:
 chmod -R  
@@ -369,7 +352,6 @@ Explanation:
 - `-R` applies changes to all files and subdirectories  
 
 ![img](screenshots/Screenshot%202026-04-06%20000617.png)
-
 
 ## Part 7: Sudo Access for Mallory
 Added Mallory to sudo group using:
@@ -401,7 +383,6 @@ tar -xvf Gutenberg.tar
 
 ![img](screenshots/Screenshot%202026-04-06%20002809.png)
 
-
 ## Part 2: File Exploration
 Listed files using:
 ls -l  
@@ -410,20 +391,17 @@ Explored directory structure and contents.
 
 ![img](screenshots/Screenshot%202026-04-06%20003210.png)
 
-
 ## Part 3: File Name Search
 Searched for files using:
 find . -name "*.txt"  
 
 ![img](screenshots/Screenshot%202026-04-06%20003322.png)
 
-
 ## Part 4: Text Search
 Searched for keywords using:
 grep -r "verdigris" .  
 
 ![img](screenshots/Screenshot%202026-04-06%20003735.png)
-
 
 ## Part 5: Contextual Search
 Used:
@@ -434,7 +412,6 @@ Explanation:
 
 ![img](screenshots/Screenshot%202026-04-06%20005322.png)
 
-
 ## Part 6: Date-Based Search
 Used:
 find . -type f -printf '%T+ %p\n' | sort  
@@ -444,15 +421,11 @@ Explanation:
 
 ![img](screenshots/Screenshot%202026-04-06%20005633.png)
 
-
-
-
 ## Part 7: Size-Based Search
 Used:
 find . -type f -size 255258c  
 
 ![img](screenshots/Screenshot%202026-04-06%20005850.png)
-
 
 ## Part 8: Largest Files
 Used:
@@ -463,7 +436,6 @@ Explanation:
 
 ![img](screenshots/Screenshot%202026-04-06%20005956.png)
 
-
 ## Part 9: Frequency Analysis
 Used:
 sed -e 's/\s/\n/g' < file.txt | sort | uniq -c | sort -nr  
@@ -472,7 +444,6 @@ Explanation:
 - Breaks text into words and counts frequency  
 
 ![img](screenshots/Screenshot%202026-04-06%20010105.png)
-
 
 ## Part 10: Answers
 - verdigris: 1
@@ -506,3 +477,45 @@ Calculated total cost and compared both printers to determine the more cost-effe
 - For a home user printing fewer pages, the cost difference would be smaller.
 - Other factors include print speed, reliability, and maintenance.
 - For large organisations, cost per page and durability are important.
+
+# Lab 2b-1 – Cloud Web Server Deployment with Amazon EC2
+
+## Part 1: EC2 Instance Setup
+
+Launched a free-tier Ubuntu EC2 instance and configured the security group to allow SSH (port 22) and HTTP (port 80). Downloaded the key pair for secure access.
+
+![img]
+
+## Part 2: SSH Access and Apache Installation
+
+Connected to the EC2 instance using SSH with the `.pem` key.  
+Updated packages and installed Apache using:
+
+sudo apt update  
+sudo apt install apache2  
+
+Verified the web server by accessing the public IP address in a browser.
+
+![img]
+
+## Part 3: Editing index.html and Hosting Files
+
+Edited `/var/www/html/index.html` to create a custom web page.  
+Downloaded a file using `wget` and copied it to the web directory using `sudo cp`.  
+Added a hyperlink in the HTML file to access the file from a browser.
+
+![img]
+
+## Part 4: Budget Monitoring
+
+Checked the AWS billing dashboard and reviewed cost monitoring to avoid unexpected charges.
+
+![img]
+
+## Reflection
+
+- Cloud deployment is faster and easier compared to local setup.
+- Apache serves files from the web directory and can be accessed via public IP.
+- File permissions are important for accessing files correctly.
+- Leaving instances running may result in additional costs.
+- DNS resolves domain names globally, while `/etc/hosts` is local.
