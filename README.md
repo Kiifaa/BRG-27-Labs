@@ -827,7 +827,7 @@ testscript
 Verified:
 ls /home/ubuntu  
 
-![img]
+![img](screenshots/Screenshot%202026-04-07%20020353.png)
 
 
 ## Part 6: Cronjob Set Up for Hourly Backup
@@ -837,14 +837,14 @@ sudo nano /etc/crontab
 Added:
 9 * * * * ubuntu /usr/bin/testscript  
 
-![img]
+![img](screenshots/Screenshot%202026-04-07%20020840.png)
 
 
 ## Part 7: Successful Cron Execution Verified
 Checked multiple backups using:
 ls -lh /home/ubuntu  
 
-![img]
+![img](screenshots/Screenshot%202026-04-07%20021357.png)
 
 
 ## Part 8: SCP to Cloud Working
@@ -854,7 +854,7 @@ scp -i key.pem $now.zip ubuntu@<your-server-ip>:/home/ubuntu/
 Verified on remote server:
 ls ~/  
 
-![img]
+![img](screenshots/Screenshot%202026-04-07%20021527.png)
 
 
 ## Part 9: SSH Certificate Accepted by Root
@@ -863,7 +863,7 @@ sudo ssh -i key.pem ubuntu@<your-server-ip>
 
 Accepted fingerprint when prompted  
 
-![img]
+![img](screenshots/Screenshot%202026-04-07%20021849.png)
 
 
 ## Part 10: Final Script Submitted
@@ -881,4 +881,4 @@ cp $now.zip /home/ubuntu/
 
 scp -i /home/ubuntu/key.pem $now.zip ubuntu@<your-server-ip>:/home/ubuntu/  
 
-![img]
+![img](screenshots/Screenshot%202026-04-07%20022252.png)
