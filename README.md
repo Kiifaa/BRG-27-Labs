@@ -484,7 +484,7 @@ Calculated total cost and compared both printers to determine the more cost-effe
 
 Launched a free-tier Ubuntu EC2 instance and configured the security group to allow SSH (port 22) and HTTP (port 80). Downloaded the key pair for secure access.
 
-![img]
+![img](screenshots/Screenshot%202026-04-06%20185459.png)
 
 ## Part 2: SSH Access and Apache Installation
 
@@ -496,7 +496,9 @@ sudo apt install apache2
 
 Verified the web server by accessing the public IP address in a browser.
 
-![img]
+![img](screenshots/Screenshot%202026-04-06%20185709.png)
+![img](screenshots/Screenshot%202026-04-06%20185922.png)
+![img](screenshots/Screenshot%202026-04-06%20190545.png)
 
 ## Part 3: Editing index.html and Hosting Files
 
@@ -504,13 +506,13 @@ Edited `/var/www/html/index.html` to create a custom web page.
 Downloaded a file using `wget` and copied it to the web directory using `sudo cp`.  
 Added a hyperlink in the HTML file to access the file from a browser.
 
-![img]
+![img](screenshots/Screenshot%202026-04-06%20191807.png)
 
 ## Part 4: Budget Monitoring
 
 Checked the AWS billing dashboard and reviewed cost monitoring to avoid unexpected charges.
 
-![img]
+![img](screenshots/Screenshot%202026-04-06%20192201.png)
 
 ## Reflection
 
