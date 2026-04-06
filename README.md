@@ -574,7 +574,7 @@ Created a script named `system_info.sh` that:
 
 This demonstrates control flow and interaction within Bash scripts.
 
-![img]
+![img](screenshots/Screenshot%202026-04-06%20202901.png)
 
 
 ## Part 6: Reflection – Loops and Conditionals
@@ -594,8 +594,8 @@ The script uses:
 
 Included looping and delays using `sleep` to continuously monitor the system.
 
-![img]
-
+![img](screenshots/Screenshot%202026-04-06%20203158.png)
+![img](screenshots/Screenshot%202026-04-06%20203208.png)
 
 ## Part 8: Reflection – Monitoring Automation
 
