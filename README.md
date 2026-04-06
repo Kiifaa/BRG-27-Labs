@@ -747,3 +747,138 @@ Explanation:
 - Confirms automatic renewal is working
 
 ![img](screenshots/Screenshot%202026-04-07%20005836.png)
+
+# Lab 3b-1 – Bash Backup Scripting, Cron Jobs & Cloud Export
+
+## Part 1: Practice Bash Commands
+Executed the following commands:
+echo "Hello World"  
+
+a=10  
+b=5  
+echo $((a + b))  
+
+sum=0  
+for i in {1..5}  
+do  
+  sum=$((sum + i))  
+done  
+echo $sum  
+
+![img]
+
+
+## Part 2: Test Files & Directories Created
+Created files and directories using:
+mkdir -p /home/ubuntu/Documents/testfolder  
+
+cd /home/ubuntu/Documents  
+touch file1 file2 file3 file4 file5  
+
+cd testfolder  
+touch file11 file22 file33 file44 file55  
+
+Verified using:
+ls -R /home/ubuntu/Documents  
+
+![img]
+
+
+## Part 3: Basic Script Working (testscript)
+Created script:
+nano /home/ubuntu/testscript  
+
+Script content:
+#!/bin/bash  
+mkdir -p /home/ubuntu/backup  
+cp -R /home/ubuntu/Documents/* /home/ubuntu/backup/  
+
+Set execute permission:
+chmod 777 /home/ubuntu/testscript  
+
+Executed:
+./testscript  
+
+![img]
+
+
+## Part 4: Script Moved to /usr/bin and Tested
+Moved script:
+sudo mv /home/ubuntu/testscript /usr/bin/testscript  
+
+Changed ownership:
+sudo chown ubuntu /usr/bin/testscript  
+
+Tested:
+testscript  
+
+![img]
+
+
+## Part 5: ZIP Archive with Date Filename
+Updated script to include:
+now=$(date +"%d_%m_%y")  
+zip -r $now.zip /home/ubuntu/backup/*  
+cp $now.zip /home/ubuntu/  
+
+Executed:
+testscript  
+
+Verified:
+ls /home/ubuntu  
+
+![img]
+
+
+## Part 6: Cronjob Set Up for Hourly Backup
+Edited crontab:
+sudo nano /etc/crontab  
+
+Added:
+9 * * * * ubuntu /usr/bin/testscript  
+
+![img]
+
+
+## Part 7: Successful Cron Execution Verified
+Checked multiple backups using:
+ls -lh /home/ubuntu  
+
+![img]
+
+
+## Part 8: SCP to Cloud Working
+Used:
+scp -i key.pem $now.zip ubuntu@<your-server-ip>:/home/ubuntu/  
+
+Verified on remote server:
+ls ~/  
+
+![img]
+
+
+## Part 9: SSH Certificate Accepted by Root
+Executed:
+sudo ssh -i key.pem ubuntu@<your-server-ip>  
+
+Accepted fingerprint when prompted  
+
+![img]
+
+
+## Part 10: Final Script Submitted
+Final script content:
+
+#!/bin/bash  
+
+now=$(date +"%d_%m_%y")  
+
+mkdir -p /home/ubuntu/backup  
+cp -R /home/ubuntu/Documents/* /home/ubuntu/backup/  
+
+zip -r $now.zip /home/ubuntu/backup/*  
+cp $now.zip /home/ubuntu/  
+
+scp -i /home/ubuntu/key.pem $now.zip ubuntu@<your-server-ip>:/home/ubuntu/  
+
+![img]
