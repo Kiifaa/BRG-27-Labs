@@ -2,12 +2,12 @@
 
 ---
 
-Student: Kiefer  
-Kaplan ID: XXXXXXXX  
-Murdoch ID: XXXXXXXX  
+Student: Toh Wen Kiat, Kiefer 
+Kaplan ID: ct0385055  
+Murdoch ID: 35763917  
 Module: BRG-27 Introduction to Server Environments and Architectures  
 Host OS: Windows 11 Pro  
-Linux Environment: Ubuntu 24.04.4 LTS via WSL 2
+Linux Environment: Ubuntu 24.04.4 LTS
 
 ---
 
