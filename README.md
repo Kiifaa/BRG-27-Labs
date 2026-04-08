@@ -543,13 +543,11 @@ This demonstrated basic file system operations in Linux.
 
 ![img](screenshots/Screenshot%202026-04-06%20201620.png)
 
-
 ## Part 2: Reflection – File System Commands
 
 - Command used to create a directory: `mkdir`  
 - File content can be viewed using `cat` or `less` without a GUI editor  
 - `cp` creates a copy of a file, while `mv` moves or renames a file
-
 
 ## Part 3: Basic Bash Script Creation
 Created a script named `hello_world.sh` with the following:
@@ -567,13 +565,11 @@ The script successfully displayed the custom output.
 
 ![img](screenshots/Screenshot%202026-04-06%20201943.png)
 
-
 ## Part 4: Reflection – Script Basics
 
 - `chmod +x` allows a script to be executed as a program  
 - `#!/bin/bash` specifies that the script should run using the Bash shell  
 - Script output can be personalised by modifying the `echo` statement  
-
 
 ## Part 5: Loop and Conditional Script
 Created a script named `system_info.sh` that:
@@ -587,13 +583,11 @@ This demonstrates control flow and interaction within Bash scripts.
 
 ![img](screenshots/Screenshot%202026-04-06%20202901.png)
 
-
 ## Part 6: Reflection – Loops and Conditionals
 
 - A `for` loop repeats a set of commands for a defined range of values  
 - If a number greater than 10 is entered, the condition will trigger the corresponding `elif` or `else` block  
 - Invalid input can be handled more effectively using input validation (e.g., checking if input is numeric)  
-
 
 ## Part 7: System Monitoring Script
 Created a script named `resource_monitor.sh` to automate system monitoring tasks.
@@ -649,7 +643,6 @@ Captured the output of `nslookup yourdomain.com` or `dig yourdomain.com` showing
 
 ![img](screenshots/Screenshot%202026-04-06%20225416.png)
 
-
 ## Activity 2: Let's Encrypt TLS Certificate Setup
 
 ### 1. Certbot Installed
@@ -704,7 +697,6 @@ Explanation:
 
 ![img](screenshots/Screenshot%202026-04-07%20003639.png)
 
-
 ## Part 2: Certbot Installed via Snap
 Installed Certbot using:
 sudo snap install --classic certbot
@@ -715,7 +707,6 @@ Explanation:
 
 ![img](screenshots/Screenshot%202026-04-07%20004722.png)
 
-
 ## Part 3: Certificate Successfully Issued
 Generated certificate using:
 sudo certbot --apache
@@ -725,7 +716,6 @@ Explanation:
 - Apache was automatically configured
 
 ![img](screenshots/Screenshot%202026-04-07%20005114.png)
-
 
 ## Part 4 & 5: HTTPS Enabled and Secure Connection (Lock Icon)
 Accessed site via HTTPS:
@@ -747,7 +737,6 @@ Explanation:
 - Certificate is valid and trusted
 
 ![img](screenshots/Screenshot%202026-04-07%20005559.png)
-
 
 ## Part 7: Certbot Auto-Renewal Dry Run Successful
 Tested renewal using:
@@ -778,7 +767,6 @@ echo $sum
 
 ![img](screenshots/Screenshot%202026-04-07%20013142.png)
 
-
 ## Part 2: Test Files & Directories Created
 Created files and directories using:
 mkdir -p /home/ubuntu/Documents/testfolder  
@@ -793,7 +781,6 @@ Verified using:
 ls -R /home/ubuntu/Documents  
 
 ![img](screenshots/Screenshot%202026-04-07%20013900.png)
-
 
 ## Part 3: Basic Script Working (testscript)
 Created script:
@@ -812,7 +799,6 @@ Executed:
 
 ![img](screenshots/Screenshot%202026-04-07%20014548.png)
 
-
 ## Part 4: Script Moved to /usr/bin and Tested
 Moved script:
 sudo mv /home/ubuntu/testscript /usr/bin/testscript  
@@ -824,7 +810,6 @@ Tested:
 testscript  
 
 ![img](screenshots/Screenshot%202026-04-07%20014919.png)
-
 
 ## Part 5: ZIP Archive with Date Filename
 Updated script to include:
@@ -840,7 +825,6 @@ ls /home/ubuntu
 
 ![img](screenshots/Screenshot%202026-04-07%20020353.png)
 
-
 ## Part 6: Cronjob Set Up for Hourly Backup
 Edited crontab:
 sudo nano /etc/crontab  
@@ -850,13 +834,11 @@ Added:
 
 ![img](screenshots/Screenshot%202026-04-07%20020840.png)
 
-
 ## Part 7: Successful Cron Execution Verified
 Checked multiple backups using:
 ls -lh /home/ubuntu  
 
 ![img](screenshots/Screenshot%202026-04-07%20021357.png)
-
 
 ## Part 8: SCP to Cloud Working
 Used:
@@ -867,7 +849,6 @@ ls ~/
 
 ![img](screenshots/Screenshot%202026-04-07%20021527.png)
 
-
 ## Part 9: SSH Certificate Accepted by Root
 Executed:
 sudo ssh -i key.pem ubuntu@<your-server-ip>  
@@ -875,7 +856,6 @@ sudo ssh -i key.pem ubuntu@<your-server-ip>
 Accepted fingerprint when prompted  
 
 ![img](screenshots/Screenshot%202026-04-07%20021849.png)
-
 
 ## Part 10: Final Script Submitted
 Final script content:
@@ -917,7 +897,6 @@ Explanation:
 - Docker allows applications to run in isolated containers and is commonly used in modern DevOps environments  
 
 ![img](screenshots/Screenshot%202026-04-07%20024028.png)
-
 
 ## Part 2: Cloud Technology Alternatives
 
